@@ -1,4 +1,4 @@
-export interface calculator {
+export interface Calculator {
     calculator: {
         title: string,
         description: string

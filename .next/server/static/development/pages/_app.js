@@ -112,6 +112,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_redux_wrapper__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store */ "./store/index.ts");
 /* harmony import */ var _store_reducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/reducer */ "./store/reducer.ts");
+/* harmony import */ var _services_global__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/global */ "./services/global.ts");
 var _jsxFileName = "/Users/anibal/Desktop/code/ui-test/pages/_app.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -123,6 +124,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 
 
 
@@ -142,18 +144,18 @@ function MyApp({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 5
     }
   }, __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "523879908",
     __self: this
-  }, "body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hbmliYWwvRGVza3RvcC9jb2RlL3VpLXRlc3QvcGFnZXMvX2FwcC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBYTJCLEFBR3NCLFNBQ1giLCJmaWxlIjoiL1VzZXJzL2FuaWJhbC9EZXNrdG9wL2NvZGUvdWktdGVzdC9wYWdlcy9fYXBwLnRzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBQcm92aWRlciB9IGZyb20gJ3JlYWN0LXJlZHV4JztcbmltcG9ydCB3aXRoUmVkdXggZnJvbSAnbmV4dC1yZWR1eC13cmFwcGVyJztcbmltcG9ydCBjcmVhdGVTdG9yZSwgeyBBcHBTdG9yZSB9IGZyb20gJy4uL3N0b3JlJztcbmltcG9ydCBBcHAsIHsgQXBwUHJvcHMsIEFwcENvbnRleHQgfSBmcm9tICduZXh0L2FwcCc7XG5pbXBvcnQgeyBpbml0U3RhdGUgfSBmcm9tICcuLi9zdG9yZS9yZWR1Y2VyJztcblxuLy9AdHMtaWdub3JlXG5mdW5jdGlvbiBNeUFwcCh7IENvbXBvbmVudCwgcGFnZVByb3BzIH06IEFwcFByb3BzKSB7XG4gIGNvbnN0IHN0b3JlID0gY3JlYXRlU3RvcmUoeyBhcHA6IGluaXRTdGF0ZSB9KTtcbiAgcmV0dXJuIChcbiAgICA8UHJvdmlkZXIgc3RvcmU9e3N0b3JlfT5cbiAgICAgIDw+XG4gICAgICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICAgICAgYm9keSB7XG4gICAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgICAgIDxDb21wb25lbnQgey4uLnBhZ2VQcm9wc30gLz5cbiAgICAgIDwvPlxuICAgIDwvUHJvdmlkZXI+XG4gICAgICAgXG4gIClcbn1cblxuXG5NeUFwcC5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyAoeyBDb21wb25lbnQsIGN0eCB9OiBBcHBDb250ZXh0KSAgPT4ge1xuICBjb25zdCBzdG9yZSA6IEFwcFN0b3JlID0gY3R4LnN0b3JlO1xuICAvLyBAdHMtaWdub3JlXG4gIGNvbnN0IHBhZ2VQcm9wcyA9IENvbXBvbmVudC5nZXRJbml0aWFsUHJvcHMgPyBhd2FpdCBDb21wb25lbnQuZ2V0SW5pdGlhbFByb3BzKHsgLi4uY3R4LCBzdG9yZSB9KSA6IHt9O1xuICByZXR1cm4geyBwYWdlUHJvcHMgfTtcbn1cblxuLy9AdHMtaWdub3JlXG5leHBvcnQgZGVmYXVsdCB3aXRoUmVkdXgoY3JlYXRlU3RvcmUpKE15QXBwKTsiXX0= */\n/*@ sourceURL=/Users/anibal/Desktop/code/ui-test/pages/_app.tsx */"), __jsx(Component, _extends({}, pageProps, {
+  }, "body{margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hbmliYWwvRGVza3RvcC9jb2RlL3VpLXRlc3QvcGFnZXMvX2FwcC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBYzJCLEFBR3NCLFNBQ1giLCJmaWxlIjoiL1VzZXJzL2FuaWJhbC9EZXNrdG9wL2NvZGUvdWktdGVzdC9wYWdlcy9fYXBwLnRzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBQcm92aWRlciB9IGZyb20gJ3JlYWN0LXJlZHV4JztcbmltcG9ydCB3aXRoUmVkdXggZnJvbSAnbmV4dC1yZWR1eC13cmFwcGVyJztcbmltcG9ydCBjcmVhdGVTdG9yZSwgeyBBcHBTdG9yZSB9IGZyb20gJy4uL3N0b3JlJztcbmltcG9ydCBBcHAsIHsgQXBwUHJvcHMsIEFwcENvbnRleHQgfSBmcm9tICduZXh0L2FwcCc7XG5pbXBvcnQgeyBpbml0U3RhdGUgfSBmcm9tICcuLi9zdG9yZS9yZWR1Y2VyJztcbmltcG9ydCB7IGdldEdsb2JhbEluZm8gfSBmcm9tICcuLi9zZXJ2aWNlcy9nbG9iYWwnO1xuXG4vL0B0cy1pZ25vcmVcbmZ1bmN0aW9uIE15QXBwKHsgQ29tcG9uZW50LCBwYWdlUHJvcHMgfTogQXBwUHJvcHMpIHtcbiAgY29uc3Qgc3RvcmUgPSBjcmVhdGVTdG9yZSh7IGFwcDogaW5pdFN0YXRlIH0pO1xuICByZXR1cm4gKFxuICAgIDxQcm92aWRlciBzdG9yZT17c3RvcmV9PlxuICAgICAgPD5cbiAgICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+e2BcbiAgICAgICAgICBib2R5IHtcbiAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICB9XG4gICAgICAgIGB9PC9zdHlsZT5cbiAgICAgICAgPENvbXBvbmVudCB7Li4ucGFnZVByb3BzfSAvPlxuICAgICAgPC8+XG4gICAgPC9Qcm92aWRlcj5cbiAgICAgICBcbiAgKVxufVxuXG5cbk15QXBwLmdldEluaXRpYWxQcm9wcyA9IGFzeW5jICh7IENvbXBvbmVudCwgY3R4IH06IEFwcENvbnRleHQpICA9PiB7XG4gIGNvbnN0IG5vc2UgPSBhd2FpdCBnZXRHbG9iYWxJbmZvKCk7XG4gIFxuICBjb25zdCBzdG9yZSA6IEFwcFN0b3JlID0gY3R4LnN0b3JlO1xuICAvLyBAdHMtaWdub3JlXG4gIGNvbnN0IHBhZ2VQcm9wcyA9IENvbXBvbmVudC5nZXRJbml0aWFsUHJvcHMgPyBhd2FpdCBDb21wb25lbnQuZ2V0SW5pdGlhbFByb3BzKHsgLi4uY3R4LCBzdG9yZSB9KSA6IHt9O1xuICByZXR1cm4geyBwYWdlUHJvcHMgfTtcbn1cblxuLy9AdHMtaWdub3JlXG5leHBvcnQgZGVmYXVsdCB3aXRoUmVkdXgoY3JlYXRlU3RvcmUpKE15QXBwKTsiXX0= */\n/*@ sourceURL=/Users/anibal/Desktop/code/ui-test/pages/_app.tsx */"), __jsx(Component, _extends({}, pageProps, {
     className: "jsx-523879908" + " " + (pageProps && pageProps.className != null && pageProps.className || ""),
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 20,
       columnNumber: 9
     }
   }))));
@@ -163,6 +165,7 @@ MyApp.getInitialProps = async ({
   Component,
   ctx
 }) => {
+  const nose = await Object(_services_global__WEBPACK_IMPORTED_MODULE_6__["getGlobalInfo"])();
   const store = ctx.store; // @ts-ignore
 
   const pageProps = Component.getInitialProps ? await Component.getInitialProps(_objectSpread({}, ctx, {
@@ -175,6 +178,26 @@ MyApp.getInitialProps = async ({
 
 
 /* harmony default export */ __webpack_exports__["default"] = (next_redux_wrapper__WEBPACK_IMPORTED_MODULE_3___default()(_store__WEBPACK_IMPORTED_MODULE_4__["default"])(MyApp));
+
+/***/ }),
+
+/***/ "./services/global.ts":
+/*!****************************!*\
+  !*** ./services/global.ts ***!
+  \****************************/
+/*! exports provided: getGlobalInfo */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getGlobalInfo", function() { return getGlobalInfo; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+const getGlobalInfo = async () => {
+  const menu = await (await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`${"https://raw.githubusercontent.com/Bernabe-Felix/Bellotero/master"}/app.json`)).data;
+  return menu;
+};
 
 /***/ }),
 
@@ -289,6 +312,17 @@ function reducer(state = initState, action) {
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.tsx */"./pages/_app.tsx");
 
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ }),
 

@@ -4,6 +4,7 @@ import withRedux from 'next-redux-wrapper';
 import createStore, { AppStore } from '../store';
 import App, { AppProps, AppContext } from 'next/app';
 import { initState } from '../store/reducer';
+import { getGlobalInfo } from '../services/global';
 
 //@ts-ignore
 function MyApp({ Component, pageProps }: AppProps) {
@@ -25,6 +26,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 
 MyApp.getInitialProps = async ({ Component, ctx }: AppContext)  => {
+  const nose = await getGlobalInfo();
+  
   const store : AppStore = ctx.store;
   // @ts-ignore
   const pageProps = Component.getInitialProps ? await Component.getInitialProps({ ...ctx, store }) : {};

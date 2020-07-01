@@ -10,4 +10,4 @@ export type AppState = {
 
 export type GlobalState = {
     app: AppState,
-  }
+}

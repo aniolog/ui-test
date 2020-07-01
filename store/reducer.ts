@@ -1,7 +1,7 @@
 import { AppActions, APP_ACTIONS } from "./actions";
 import { AppState } from "./state";
 
-const initState: AppState = {
+export const initState: AppState = {
   calculatorInfo: {
       calculator: {
           description: '',

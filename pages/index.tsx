@@ -8,7 +8,9 @@ interface IndexPageProps {
 
 const Index = (props: IndexPageProps) => {
   return (
-    <>Hello</>
+    <>
+      Hola
+    </>
   );
 }
 

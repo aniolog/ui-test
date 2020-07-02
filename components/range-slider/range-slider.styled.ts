@@ -17,7 +17,6 @@ export const RangeInput = styled.input`
         border-radius: 50%;
         background-color: #fff;
         border: 5px solid #071eb3;
-        
+        box-shadow: 0 2px 8px 0 rgba(7, 30, 179, 0.24);
     }    
-
 `;

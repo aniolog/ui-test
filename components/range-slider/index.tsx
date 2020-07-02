@@ -14,7 +14,7 @@ const RangeSlider = (props: RangeSliderProps) => {
     const { value, step, max, min } = props;
     const progress = (value / max) * 100 + '%'
     const styleInput = {
-        background: `linear-gradient(90deg, ${Colors.navyBlue} 0% ${progress},   ${Colors.greyish} ${progress} 100%)`,
+        background: `linear-gradient(90deg, ${Colors.navyBlue} 0% ${progress},   ${Colors.blueBorder} ${progress} 100%)`,
     };
     return (
         <RangeInput 

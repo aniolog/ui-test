@@ -98,14 +98,14 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 9
     }
   }, __jsx(_header_styled__WEBPACK_IMPORTED_MODULE_1__["HeaderContent"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 14,
       columnNumber: 13
     }
   }, __jsx("img", {
@@ -113,21 +113,21 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 15,
       columnNumber: 17
     }
   }), __jsx(_header_styled__WEBPACK_IMPORTED_MODULE_1__["Links"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 16,
       columnNumber: 17
     }
   }, __jsx(_header_styled__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 17,
       columnNumber: 21
     }
   }, "Home"), links.map(function (link, index) {
@@ -140,7 +140,7 @@ var Header = function Header() {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20,
+        lineNumber: 21,
         columnNumber: 33
       }
     }, link.text);
@@ -27720,6 +27720,8 @@ var APP_ACTIONS;
   APP_ACTIONS["REVIEWS_LOADED"] = "APP.REVIEWS_LOADED";
   APP_ACTIONS["NEXT_HYDRATE"] = "__NEXT_REDUX_WRAPPER_HYDRATE__";
   APP_ACTIONS["CALCULATOR_INFO_LOADED"] = "APP.CALCULATOR_INFO_LOADED";
+  APP_ACTIONS["FULL_TIME_EMPLOYEES_LOADED"] = "APP.FULL_TIME_EMPLOYEES";
+  APP_ACTIONS["MONTHLY_INGREDIENTS_SPENDING_LOADED"] = "APP.MONTHLY_INGREDIENTS_SPENDING_LOADED";
 })(APP_ACTIONS || (APP_ACTIONS = {}));
 
 /***/ }),
@@ -27798,7 +27800,9 @@ var initState = {
   },
   reviews: [],
   selectedReviewIndex: 0,
-  testimonialTitle: ''
+  testimonialTitle: '',
+  fullTimeEmployees: 0,
+  monthlyIngredientSpending: 0
 };
 
 function reducer() {
@@ -27827,6 +27831,16 @@ function reducer() {
       return state = _objectSpread({}, state, {
         calculatorTitle: action.calculatorTitle,
         calculatorDescription: action.calculatorDescription
+      });
+
+    case _actions__WEBPACK_IMPORTED_MODULE_1__["APP_ACTIONS"].FULL_TIME_EMPLOYEES_LOADED:
+      return state = _objectSpread({}, state, {
+        fullTimeEmployees: action.fullTimeEmployees
+      });
+
+    case _actions__WEBPACK_IMPORTED_MODULE_1__["APP_ACTIONS"].MONTHLY_INGREDIENTS_SPENDING_LOADED:
+      return state = _objectSpread({}, state, {
+        monthlyIngredientSpending: action.monthlyIngredientSpending
       });
 
     case _actions__WEBPACK_IMPORTED_MODULE_1__["APP_ACTIONS"].NEXT_HYDRATE:

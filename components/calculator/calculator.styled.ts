@@ -18,7 +18,8 @@ export const CalculatorContent = styled.div`
     padding-top: 120px;
 `;
 
-export const CalculatorTitle = styled(Title)``;
+export const CalculatorTitle = styled(Title)`
+`;
 
 export const InfoContainer = styled.div`
     width: 350px;
@@ -111,4 +112,36 @@ export const EmployeesInput = styled(CurrencyFormat)`
         background-color: ${Colors.white};
         color: ${Colors.black};
     }
+`;
+
+export const ResultSection = styled.div`
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+`;
+
+export const Result = styled.div`
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+`;
+
+export const ResultValue = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: ${Colors.navyBlue};
+`;
+
+export const ValueDollarIcon = styled(FontAwesomeIcon)`
+    font-size: 36px;
+    color: ${Colors.navyBlue};
+    padding-bottom: 12px;
+`;
+
+export const ResultAmount = styled.span`
+    font-size: 72px;
+    margin-left: 8px;
 `;

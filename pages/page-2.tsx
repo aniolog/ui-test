@@ -1,6 +1,6 @@
 import React, { useEffect }  from 'react';
 import { getCalculatorInfo } from '../services';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { APP_ACTIONS } from '../store/actions';
 import CalculatorComponent from '../components/calculator';
 

@@ -7,6 +7,14 @@ export const HeaderContainer = styled.div`
     height: 64px;
     background-color: ${Colors.white};
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+`;
+
+export const HeaderContent = styled.div`
+    width: 1120px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 `;

@@ -1,10 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import withRedux, { createWrapper } from 'next-redux-wrapper';
+import { createWrapper } from 'next-redux-wrapper';
 import store from '../store';
-import App, { AppProps, AppContext } from 'next/app';
+import { AppProps, AppContext } from 'next/app';
 import { APP_ACTIONS } from '../store/actions';
 import { getGlobalInfo } from '../services/global';
+import { Container } from 'react-bootstrap';
+import Header from '../components/header';
+import { AppContainer } from '../components/app-container';
+import { GlobalFonts } from '../styles/fonts';
 
 
 //@ts-ignore
@@ -14,10 +18,19 @@ function MyApp({ Component, pageProps }: AppProps) {
       <>
         <style jsx global>{`
           body {
+            padding: 0;
             margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+              Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           }
         `}</style>
-        <Component {...pageProps} />
+        <GlobalFonts />
+        <Container>
+          <Header />
+          <AppContainer>
+            <Component {...pageProps} />
+          </AppContainer>
+        </Container>
       </>
     </Provider>
   )

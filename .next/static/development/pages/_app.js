@@ -27859,6 +27859,7 @@ var Colors;
   Colors["greyish"] = "#a5a5a5";
   Colors["iceBlue"] = "#f9faff";
   Colors["white"] = "#fff";
+  Colors["blueBorder"] = "#d6dcff";
 })(Colors || (Colors = {}));
 
 ;

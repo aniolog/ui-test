@@ -2,31 +2,34 @@ import React, { useEffect }  from 'react';
 import { getCalculatorInfo } from '../services';
 import { useSelector, useDispatch } from 'react-redux';
 import { APP_ACTIONS } from '../store/actions';
+import CalculatorComponent from '../components/calculator';
 
 interface CalculatorPageProps {
-  title: string,
-  description: string
+  calculatorTitle: string,
+  calculatorDescription: string,   
 };
 
 const CalculatorPage = (props: CalculatorPageProps) => {
   const dispatcher = useDispatch();
   
   useEffect(() => {
-    dispatcher({ type: APP_ACTIONS.CALCULATOR_INFO_LOADED, calculatorTitle: props.title, calculatorDescription: props.description });
+    dispatcher({ 
+      type: APP_ACTIONS.CALCULATOR_INFO_LOADED,
+      calculatorTitle: props.calculatorTitle,
+      calculatorDescription: props.calculatorDescription 
+    });
   }, []);
 
   return (
     <>
-      {props.title}
-      <br />
-      {props.description}
+      <CalculatorComponent calculatorTitle={props.calculatorTitle}  calculatorDescription={props.calculatorDescription}/>
     </>
   );
 }
 
 CalculatorPage.getInitialProps = async () => {
   const { calculator: { title, description } } = await getCalculatorInfo();
-  return { title, description };
+  return { calculatorTitle: title, calculatorDescription: description };
 };
 
 export default CalculatorPage;

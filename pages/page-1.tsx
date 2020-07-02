@@ -25,7 +25,6 @@ const ReviewsPage = (props: ReviewsPageProps) => {
         selectedReviewIndex={reviewIndex}
         onReviewChanged={(selectedReviewIndex) => dispatcher({ type: APP_ACTIONS.REVIEW_CHANGED, selectedReviewIndex })}
       />
-   
     </>
   );
 }

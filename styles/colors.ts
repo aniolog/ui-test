@@ -4,4 +4,5 @@ export enum Colors {
     greyish = '#a5a5a5',
     iceBlue = '#f9faff',
     white = '#fff',
+    blueBorder = '#d6dcff'
 };

@@ -16,8 +16,8 @@ const Header = () => {
                     <Link>Home</Link>
                     {
                         links.map(
-                            link => 
-                                <Link 
+                            (link, index) => 
+                                <Link key={`${link.route}${index}`}
                                     active={router.route === `/${link.route}`}
                                     onClick={() => router.push(`/${link.route}`)}
                                 >

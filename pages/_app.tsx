@@ -9,6 +9,7 @@ import { Container } from 'react-bootstrap';
 import Header from '../components/header';
 import { AppContainer } from '../components/app-container';
 import { GlobalFonts } from '../styles/fonts';
+import { Colors } from '../styles/colors';
 
 
 //@ts-ignore

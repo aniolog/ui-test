@@ -6,4 +6,7 @@ export const AppContainer = styled.div`
     min-height: calc(100vh - 64px);
     overflow-y: 'auto';
     background-color: ${Colors.iceBlue};
+    display: flex;
+    justify-content: center;
+    align-content: center;
 `;

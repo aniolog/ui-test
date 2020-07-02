@@ -111,7 +111,7 @@ __webpack_require__.r(__webpack_exports__);
 const AppContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "app-container__AppContainer",
   componentId: "l6f89c-0"
-})(["width:100vw;min-height:calc(100vh - 64px);overflow-y:'auto';background-color:", ";"], _styles_colors__WEBPACK_IMPORTED_MODULE_1__["Colors"].iceBlue);
+})(["width:100vw;min-height:calc(100vh - 64px);overflow-y:'auto';background-color:", ";display:flex;justify-content:center;align-content:center;"], _styles_colors__WEBPACK_IMPORTED_MODULE_1__["Colors"].iceBlue);
 
 /***/ }),
 
@@ -218,7 +218,8 @@ const Header = () => {
       lineNumber: 16,
       columnNumber: 21
     }
-  }, "Home"), links.map(link => __jsx(_header_styled__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "Home"), links.map((link, index) => __jsx(_header_styled__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    key: `${link.route}${index}`,
     active: router.route === `/${link.route}`,
     onClick: () => router.push(`/${link.route}`),
     __self: undefined,
@@ -280,8 +281,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
- //@ts-ignore
 
+
+//@ts-ignore
 function MyApp({
   Component,
   pageProps
@@ -291,38 +293,38 @@ function MyApp({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 18,
       columnNumber: 5
     }
   }, __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "4243733796",
     __self: this
-  }, "body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen, Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hbmliYWwvRGVza3RvcC9jb2RlL3VpLXRlc3QvcGFnZXMvX2FwcC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBa0IyQixBQUd1QixVQUNELFNBRTZELHFJQUN4RSIsImZpbGUiOiIvVXNlcnMvYW5pYmFsL0Rlc2t0b3AvY29kZS91aS10ZXN0L3BhZ2VzL19hcHAudHN4Iiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IFByb3ZpZGVyIH0gZnJvbSAncmVhY3QtcmVkdXgnO1xuaW1wb3J0IHsgY3JlYXRlV3JhcHBlciB9IGZyb20gJ25leHQtcmVkdXgtd3JhcHBlcic7XG5pbXBvcnQgc3RvcmUgZnJvbSAnLi4vc3RvcmUnO1xuaW1wb3J0IHsgQXBwUHJvcHMsIEFwcENvbnRleHQgfSBmcm9tICduZXh0L2FwcCc7XG5pbXBvcnQgeyBBUFBfQUNUSU9OUyB9IGZyb20gJy4uL3N0b3JlL2FjdGlvbnMnO1xuaW1wb3J0IHsgZ2V0R2xvYmFsSW5mbyB9IGZyb20gJy4uL3NlcnZpY2VzL2dsb2JhbCc7XG5pbXBvcnQgeyBDb250YWluZXIgfSBmcm9tICdyZWFjdC1ib290c3RyYXAnO1xuaW1wb3J0IEhlYWRlciBmcm9tICcuLi9jb21wb25lbnRzL2hlYWRlcic7XG5pbXBvcnQgeyBBcHBDb250YWluZXIgfSBmcm9tICcuLi9jb21wb25lbnRzL2FwcC1jb250YWluZXInO1xuaW1wb3J0IHsgR2xvYmFsRm9udHMgfSBmcm9tICcuLi9zdHlsZXMvZm9udHMnO1xuXG5cbi8vQHRzLWlnbm9yZVxuZnVuY3Rpb24gTXlBcHAoeyBDb21wb25lbnQsIHBhZ2VQcm9wcyB9OiBBcHBQcm9wcykge1xuICByZXR1cm4gKFxuICAgIDxQcm92aWRlciBzdG9yZT17c3RvcmV9PlxuICAgICAgPD5cbiAgICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+e2BcbiAgICAgICAgICBib2R5IHtcbiAgICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgICBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCBTZWdvZSBVSSwgUm9ib3RvLCBPeHlnZW4sXG4gICAgICAgICAgICAgIFVidW50dSwgQ2FudGFyZWxsLCBGaXJhIFNhbnMsIERyb2lkIFNhbnMsIEhlbHZldGljYSBOZXVlLCBzYW5zLXNlcmlmO1xuICAgICAgICAgIH1cbiAgICAgICAgYH08L3N0eWxlPlxuICAgICAgICA8R2xvYmFsRm9udHMgLz5cbiAgICAgICAgPENvbnRhaW5lcj5cbiAgICAgICAgICA8SGVhZGVyIC8+XG4gICAgICAgICAgPEFwcENvbnRhaW5lcj5cbiAgICAgICAgICAgIDxDb21wb25lbnQgey4uLnBhZ2VQcm9wc30gLz5cbiAgICAgICAgICA8L0FwcENvbnRhaW5lcj5cbiAgICAgICAgPC9Db250YWluZXI+XG4gICAgICA8Lz5cbiAgICA8L1Byb3ZpZGVyPlxuICApXG59XG5cblxuTXlBcHAuZ2V0SW5pdGlhbFByb3BzID0gYXN5bmMgKHsgQ29tcG9uZW50LCBjdHggfTogQXBwQ29udGV4dCkgID0+IHtcbiAgY29uc3QgbWVudSA9ICBhd2FpdCBnZXRHbG9iYWxJbmZvKCk7XG4gIGN0eC5zdG9yZS5kaXNwYXRjaCh7IHR5cGU6IEFQUF9BQ1RJT05TLk1FTlVfTE9BREVELCBtZW51IH0pO1xuICAvLyBAdHMtaWdub3JlXG4gIGNvbnN0IHBhZ2VQcm9wcyA9IENvbXBvbmVudC5nZXRJbml0aWFsUHJvcHMgPyBhd2FpdCBDb21wb25lbnQuZ2V0SW5pdGlhbFByb3BzKHsgLi4uY3R4IH0pIDoge307XG4gIHJldHVybiB7ICBwYWdlUHJvcHMgfTtcbn1cblxuY29uc3QgbWFrZVN0b3JlID0gKCkgPT4gc3RvcmU7XG5jb25zdCB3cmFwcGVyID0gY3JlYXRlV3JhcHBlcihtYWtlU3RvcmUpO1xuXG4vL0B0cy1pZ25vcmVcbmV4cG9ydCBkZWZhdWx0IHdyYXBwZXIud2l0aFJlZHV4KE15QXBwKTsiXX0= */\n/*@ sourceURL=/Users/anibal/Desktop/code/ui-test/pages/_app.tsx */"), __jsx(_styles_fonts__WEBPACK_IMPORTED_MODULE_10__["GlobalFonts"], {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 9
-    }
-  }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Container"], {
+  }, "body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen, Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hbmliYWwvRGVza3RvcC9jb2RlL3VpLXRlc3QvcGFnZXMvX2FwcC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBbUIyQixBQUd1QixVQUNELFNBRTZELHFJQUN4RSIsImZpbGUiOiIvVXNlcnMvYW5pYmFsL0Rlc2t0b3AvY29kZS91aS10ZXN0L3BhZ2VzL19hcHAudHN4Iiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IFByb3ZpZGVyIH0gZnJvbSAncmVhY3QtcmVkdXgnO1xuaW1wb3J0IHsgY3JlYXRlV3JhcHBlciB9IGZyb20gJ25leHQtcmVkdXgtd3JhcHBlcic7XG5pbXBvcnQgc3RvcmUgZnJvbSAnLi4vc3RvcmUnO1xuaW1wb3J0IHsgQXBwUHJvcHMsIEFwcENvbnRleHQgfSBmcm9tICduZXh0L2FwcCc7XG5pbXBvcnQgeyBBUFBfQUNUSU9OUyB9IGZyb20gJy4uL3N0b3JlL2FjdGlvbnMnO1xuaW1wb3J0IHsgZ2V0R2xvYmFsSW5mbyB9IGZyb20gJy4uL3NlcnZpY2VzL2dsb2JhbCc7XG5pbXBvcnQgeyBDb250YWluZXIgfSBmcm9tICdyZWFjdC1ib290c3RyYXAnO1xuaW1wb3J0IEhlYWRlciBmcm9tICcuLi9jb21wb25lbnRzL2hlYWRlcic7XG5pbXBvcnQgeyBBcHBDb250YWluZXIgfSBmcm9tICcuLi9jb21wb25lbnRzL2FwcC1jb250YWluZXInO1xuaW1wb3J0IHsgR2xvYmFsRm9udHMgfSBmcm9tICcuLi9zdHlsZXMvZm9udHMnO1xuaW1wb3J0IHsgQ29sb3JzIH0gZnJvbSAnLi4vc3R5bGVzL2NvbG9ycyc7XG5cblxuLy9AdHMtaWdub3JlXG5mdW5jdGlvbiBNeUFwcCh7IENvbXBvbmVudCwgcGFnZVByb3BzIH06IEFwcFByb3BzKSB7XG4gIHJldHVybiAoXG4gICAgPFByb3ZpZGVyIHN0b3JlPXtzdG9yZX0+XG4gICAgICA8PlxuICAgICAgICA8c3R5bGUganN4IGdsb2JhbD57YFxuICAgICAgICAgIGJvZHkge1xuICAgICAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsIFNlZ29lIFVJLCBSb2JvdG8sIE94eWdlbixcbiAgICAgICAgICAgICAgVWJ1bnR1LCBDYW50YXJlbGwsIEZpcmEgU2FucywgRHJvaWQgU2FucywgSGVsdmV0aWNhIE5ldWUsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgICAgIDxHbG9iYWxGb250cyAvPlxuICAgICAgICA8Q29udGFpbmVyPlxuICAgICAgICAgIDxIZWFkZXIgLz5cbiAgICAgICAgICA8QXBwQ29udGFpbmVyPlxuICAgICAgICAgICAgPENvbXBvbmVudCB7Li4ucGFnZVByb3BzfSAvPlxuICAgICAgICAgIDwvQXBwQ29udGFpbmVyPlxuICAgICAgICA8L0NvbnRhaW5lcj5cbiAgICAgIDwvPlxuICAgIDwvUHJvdmlkZXI+XG4gIClcbn1cblxuXG5NeUFwcC5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyAoeyBDb21wb25lbnQsIGN0eCB9OiBBcHBDb250ZXh0KSAgPT4ge1xuICBjb25zdCBtZW51ID0gIGF3YWl0IGdldEdsb2JhbEluZm8oKTtcbiAgY3R4LnN0b3JlLmRpc3BhdGNoKHsgdHlwZTogQVBQX0FDVElPTlMuTUVOVV9MT0FERUQsIG1lbnUgfSk7XG4gIC8vIEB0cy1pZ25vcmVcbiAgY29uc3QgcGFnZVByb3BzID0gQ29tcG9uZW50LmdldEluaXRpYWxQcm9wcyA/IGF3YWl0IENvbXBvbmVudC5nZXRJbml0aWFsUHJvcHMoeyAuLi5jdHggfSkgOiB7fTtcbiAgcmV0dXJuIHsgIHBhZ2VQcm9wcyB9O1xufVxuXG5jb25zdCBtYWtlU3RvcmUgPSAoKSA9PiBzdG9yZTtcbmNvbnN0IHdyYXBwZXIgPSBjcmVhdGVXcmFwcGVyKG1ha2VTdG9yZSk7XG5cbi8vQHRzLWlnbm9yZVxuZXhwb3J0IGRlZmF1bHQgd3JhcHBlci53aXRoUmVkdXgoTXlBcHApOyJdfQ== */\n/*@ sourceURL=/Users/anibal/Desktop/code/ui-test/pages/_app.tsx */"), __jsx(_styles_fonts__WEBPACK_IMPORTED_MODULE_10__["GlobalFonts"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28,
       columnNumber: 9
     }
-  }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Container"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29,
+      columnNumber: 9
+    }
+  }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
       columnNumber: 11
     }
   }), __jsx(_components_app_container__WEBPACK_IMPORTED_MODULE_9__["AppContainer"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 31,
       columnNumber: 11
     }
   }, __jsx(Component, _extends({}, pageProps, {
@@ -330,7 +332,7 @@ function MyApp({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 13
     }
   }))))));
@@ -566,7 +568,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 
-const RobotoFontFaces = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Regular.ttf') format('truetype');font-weight:normal;font-style:normal;font-display:swap;}@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap;}@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Black.ttf') format('truetype');font-weight:Bold;font-style:normal;font-display:swap;}@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Bold.ttf') format('truetype');font-weight:Bolder;font-style:normal;font-display:swap;}"]);
+const RobotoFontFaces = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Regular.ttf') format('truetype');font-weight:normal;font-style:normal;font-display:swap;}@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap;}@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Black.ttf') format('truetype');font-weight:bold;font-style:normal;font-display:swap;}@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Bold.ttf') format('truetype');font-weight:Bolder;font-style:normal;font-display:swap;}@font-face{font-family:'CormorantGaramond';src:url('/fonts/CormorantGaramond-SemiBoldItalic.ttf') format('truetype');font-style:italic;font-display:swap;}"]);
 /* harmony default export */ __webpack_exports__["default"] = (RobotoFontFaces);
 
 /***/ }),

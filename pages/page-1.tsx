@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { APP_ACTIONS } from '../store/actions';
 import { getTestimonialInfo } from '../services';
 import { Review } from '../types';
+import TestimonialComponent from '../components/testimonial';
 
 interface ReviewsPageProps {
   reviews: Array<Review>,
@@ -16,15 +17,15 @@ const ReviewsPage = (props: ReviewsPageProps) => {
   useEffect(() => {
     dispatcher({ type: APP_ACTIONS.REVIEWS_LOADED, reviews: props.reviews, testimonialTitle: props.testimonialTitle });
   }, []);
-
   return (
     <>
-      {selectedReview.name}
-      <br />
-      {selectedReview.position}
-      <br />
-      {selectedReview.comment}
-      <button onClick={() => dispatcher({ type: APP_ACTIONS.REVIEW_CHANGED, selectedReviewIndex: 1 })}>{ reviewIndex+1 } / { props.reviews.length}</button>
+      <TestimonialComponent 
+        testimonialTitle={props.testimonialTitle}
+        reviews={props.reviews}
+        selectedReviewIndex={reviewIndex}
+        onReviewChanged={(selectedReviewIndex) => dispatcher({ type: APP_ACTIONS.REVIEW_CHANGED, selectedReviewIndex })}
+      />
+   
     </>
   );
 }

@@ -6,5 +6,7 @@ export type AppState = {
     selectedReviewIndex: number,
     menu: Menu,
     calculatorTitle: string,
-    calculatorDescription: string,   
+    calculatorDescription: string, 
+    fullTimeEmployees: number,
+    monthlyIngredientSpending: number 
 }

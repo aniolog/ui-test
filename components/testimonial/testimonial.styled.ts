@@ -6,6 +6,12 @@ export const TestimonialTitle = styled(Title)`
     margin-top: 10px;
 `;
 
+export const Container = styled.div`
+    width: 1120px;
+    min-height: auto;
+    padding-top: 120px;
+`;
+
 export const ReviewContent = styled.div`
     font-family: 'Roboto';
     width: 1002px;
@@ -90,11 +96,4 @@ export const ReviewText = styled.div`
     letter-spacing: normal;
     color:${Colors.black};
     padding-top: 11px;
-`;
-
-export const Container = styled.div`
-    width: 1120px;
-    min-height: auto;
-    padding-top: 120px;
-    
 `;

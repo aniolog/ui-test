@@ -8,7 +8,9 @@ export enum APP_ACTIONS {
   REVIEW_CHANGED = 'APP.REVIEW_CHANGED',
   REVIEWS_LOADED = 'APP.REVIEWS_LOADED',
   NEXT_HYDRATE = '__NEXT_REDUX_WRAPPER_HYDRATE__',
-  CALCULATOR_INFO_LOADED = 'APP.CALCULATOR_INFO_LOADED'
+  CALCULATOR_INFO_LOADED = 'APP.CALCULATOR_INFO_LOADED',
+  FULL_TIME_EMPLOYEES_LOADED  = 'APP.FULL_TIME_EMPLOYEES',
+  MONTHLY_INGREDIENTS_SPENDING_LOADED  = 'APP.MONTHLY_INGREDIENTS_SPENDING_LOADED',
 }
 
 export interface InitApp extends ReduxAction {
@@ -37,6 +39,16 @@ export interface calculatorInfoLoaded extends ReduxAction {
   calculatorTitle: string,
 }
 
+export interface fullTimeEmployeesLoaded extends ReduxAction {
+  type: APP_ACTIONS.FULL_TIME_EMPLOYEES_LOADED,
+  fullTimeEmployees: number,
+}
+
+export interface monthlyIngredientsSpendingLoaded extends ReduxAction {
+  type: APP_ACTIONS.MONTHLY_INGREDIENTS_SPENDING_LOADED,
+  monthlyIngredientSpending: number,
+}
+
 export interface nextHydrate extends ReduxAction {
   type: APP_ACTIONS.NEXT_HYDRATE,
   payload: {
@@ -44,4 +56,11 @@ export interface nextHydrate extends ReduxAction {
   } 
 }
 
-export type AppActions = InitApp | menuLoaded | reviewChanged | nextHydrate | reviewsLoaded | calculatorInfoLoaded;
+export type AppActions = InitApp | 
+  menuLoaded |
+  reviewChanged |
+  nextHydrate |
+  reviewsLoaded |
+  calculatorInfoLoaded |
+  fullTimeEmployeesLoaded |
+  monthlyIngredientsSpendingLoaded;

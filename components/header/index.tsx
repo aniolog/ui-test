@@ -2,6 +2,7 @@ import React from 'react';
 import { HeaderContainer, Links, Link, HeaderContent } from './header.styled';
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
+
 //@ts-ignore
 import Logo from '../../public/images/bellotero.svg';
 

@@ -9,7 +9,9 @@ export const initState: AppState = {
   },
   reviews:[],
   selectedReviewIndex: 0,
-  testimonialTitle: ''
+  testimonialTitle: '',
+  fullTimeEmployees: 0,
+  monthlyIngredientSpending: 0
 }
 
 function reducer(state: AppState = initState, action: AppActions): AppState {
@@ -36,6 +38,16 @@ function reducer(state: AppState = initState, action: AppActions): AppState {
           ...state,
           calculatorTitle: action.calculatorTitle,
           calculatorDescription: action.calculatorDescription
+        }
+      case APP_ACTIONS.FULL_TIME_EMPLOYEES_LOADED:
+        return state = {
+          ...state,
+          fullTimeEmployees: action.fullTimeEmployees,
+        }
+      case APP_ACTIONS.MONTHLY_INGREDIENTS_SPENDING_LOADED:
+        return state = {
+          ...state,
+          monthlyIngredientSpending: action.monthlyIngredientSpending,
         }
       case APP_ACTIONS.NEXT_HYDRATE:
         return state = {

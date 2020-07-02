@@ -5,9 +5,6 @@ export type AppState = {
     reviews: Array<Review>,
     selectedReviewIndex: number,
     menu: Menu,
-    calculatorInfo: Calculator   
-}
-
-export type GlobalState = {
-    app: AppState,
+    calculatorTitle: string,
+    calculatorDescription: string,   
 }

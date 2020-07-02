@@ -3,6 +3,6 @@ import { Menu } from '../types/menu';
 
 
 export const getGlobalInfo = async (): Promise<Menu> => {
-    const menu: Menu = await (await axios.get(`${process.env.baseUrl}/app.json`)).data
+    const menu: Menu = await (await axios.get(`${process.env.baseUrl}/app.json`)).data.menu;
     return menu;
 }

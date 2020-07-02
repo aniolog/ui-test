@@ -1,31 +1,16 @@
-import { Middleware, StoreEnhancer, applyMiddleware, createStore, Store, combineReducers, Reducer } from 'redux';
-import getConfig from 'next/config';
-import { AppState, GlobalState } from './state';
-import { AppActions } from './actions';
-import reducer from './reducer';
-import createSagaMiddleware from 'redux-saga';
+import { applyMiddleware, createStore } from 'redux';
+import { AppState } from './state';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import reducers from './reducers';
+import createSagaMiddleware from 'redux-saga';
+import thunk from 'redux-thunk';
+import { initState } from './reducers/reducer';
 
-
-export type AppStore = Store<GlobalState, AppActions>;
-
-
-const reducers: Reducer<GlobalState> = combineReducers<GlobalState>({
-    app: reducer
-});
-
-function configureStore(initialState: GlobalState): AppStore {
-  const { composeWithDevTools } = require('redux-devtools-extension');
-  const sagaMiddleware = createSagaMiddleware();
-  const store = createStore(
-    reducers,
-    initialState,
-    composeWithDevTools(applyMiddleware(...[sagaMiddleware]))
-  )
-
-  // @ts-ignore
-  //store.sagaTask = sagaMiddleware.run(indexSaga)
-  return store;
+const initialState = {
+    app: initState
 }
 
-export default configureStore;
+const store = createStore(reducers, initialState, composeWithDevTools(applyMiddleware(...[thunk])));
+
+
+export default store;

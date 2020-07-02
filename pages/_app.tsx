@@ -1,14 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import withRedux from 'next-redux-wrapper';
-import createStore, { AppStore } from '../store';
+import withRedux, { createWrapper } from 'next-redux-wrapper';
+import store from '../store';
 import App, { AppProps, AppContext } from 'next/app';
-import { initState } from '../store/reducer';
+import { APP_ACTIONS } from '../store/actions';
 import { getGlobalInfo } from '../services/global';
+
 
 //@ts-ignore
 function MyApp({ Component, pageProps }: AppProps) {
-  const store = createStore({ app: initState });
   return (
     <Provider store={store}>
       <>
@@ -20,19 +20,20 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </>
     </Provider>
-       
   )
 }
 
 
 MyApp.getInitialProps = async ({ Component, ctx }: AppContext)  => {
-  const nose = await getGlobalInfo();
-  
-  const store : AppStore = ctx.store;
+  const menu =  await getGlobalInfo();
+  ctx.store.dispatch({ type: APP_ACTIONS.MENU_LOADED, menu });
   // @ts-ignore
-  const pageProps = Component.getInitialProps ? await Component.getInitialProps({ ...ctx, store }) : {};
-  return { pageProps };
+  const pageProps = Component.getInitialProps ? await Component.getInitialProps({ ...ctx }) : {};
+  return {  pageProps };
 }
 
+const makeStore = () => store;
+const wrapper = createWrapper(makeStore);
+
 //@ts-ignore
-export default withRedux(createStore)(MyApp);
+export default wrapper.withRedux(MyApp);

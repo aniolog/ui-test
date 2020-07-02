@@ -1,11 +1,47 @@
 import { Action as ReduxAction } from "redux";
+import { Menu, Review } from "../types";
+import { AppState } from "./state";
 
 export enum APP_ACTIONS {
-  INIT= "APP.INIT",
+  INIT= 'APP.INIT',
+  MENU_LOADED = 'APP.MENU_LOADED',
+  REVIEW_CHANGED = 'APP.REVIEW_CHANGED',
+  REVIEWS_LOADED = 'APP.REVIEWS_LOADED',
+  NEXT_HYDRATE = '__NEXT_REDUX_WRAPPER_HYDRATE__',
+  CALCULATOR_INFO_LOADED = 'APP.CALCULATOR_INFO_LOADED'
 }
 
 export interface InitApp extends ReduxAction {
   type: APP_ACTIONS.INIT,
 }
 
-export type AppActions = InitApp;
+export interface menuLoaded extends ReduxAction {
+  type: APP_ACTIONS.MENU_LOADED,
+  menu: Menu
+}
+
+export interface reviewChanged extends ReduxAction {
+  type: APP_ACTIONS.REVIEW_CHANGED,
+  selectedReviewIndex: number
+}
+
+export interface reviewsLoaded extends ReduxAction {
+  type: APP_ACTIONS.REVIEWS_LOADED,
+  testimonialTitle: string,
+  reviews: Array<Review>
+}
+
+export interface calculatorInfoLoaded extends ReduxAction {
+  type: APP_ACTIONS.CALCULATOR_INFO_LOADED,
+  calculatorDescription: string,
+  calculatorTitle: string,
+}
+
+export interface nextHydrate extends ReduxAction {
+  type: APP_ACTIONS.NEXT_HYDRATE,
+  payload: {
+    app: AppState
+  } 
+}
+
+export type AppActions = InitApp | menuLoaded | reviewChanged | nextHydrate | reviewsLoaded | calculatorInfoLoaded;

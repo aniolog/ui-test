@@ -1,6 +1,7 @@
 import React from 'react';
 import { RangeInput } from './range-slider.styled';
 import { Colors } from '../../styles/colors';
+import { DefaultProps, PropTypes } from './range-slider.prop-types';
 
 interface RangeSliderProps {
     step: number,
@@ -28,5 +29,9 @@ const RangeSlider = (props: RangeSliderProps) => {
         />
     )
 }
+
+
+RangeSlider.propTypes = PropTypes;
+RangeSlider.defaultProps = DefaultProps;
 
 export default RangeSlider;

@@ -4,6 +4,7 @@ import { APP_ACTIONS } from '../store/actions';
 import { getTestimonialInfo } from '../services';
 import { Review } from '../types';
 import TestimonialComponent from '../components/testimonial';
+import Head from 'next/head';
 
 interface ReviewsPageProps {
   reviews: Array<Review>,
@@ -19,6 +20,9 @@ const ReviewsPage = (props: ReviewsPageProps) => {
   }, []);
   return (
     <>
+      <Head>
+        <title>Applicants</title>
+      </Head>
       <TestimonialComponent 
         testimonialTitle={props.testimonialTitle}
         reviews={props.reviews}

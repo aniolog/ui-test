@@ -23,6 +23,7 @@ import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import RangeSlider from '../range-slider';
 import { useSelector, useDispatch } from 'react-redux';
 import { APP_ACTIONS } from '../../store/actions';
+import { PropTypes, DefaultProps } from './calculator.prop-types';
 
 interface CalculatorPageProps {
     calculatorTitle: string,
@@ -121,5 +122,9 @@ const CalculatorComponent = (props: CalculatorPageProps) => {
         </>
     );
 }
+
+
+CalculatorComponent.propTypes = PropTypes;
+CalculatorComponent.defaultProps = DefaultProps;
 
 export default CalculatorComponent;

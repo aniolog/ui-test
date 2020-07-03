@@ -12,7 +12,6 @@ import { GlobalFonts } from '../styles/fonts';
 import { Colors } from '../styles/colors';
 
 
-//@ts-ignore
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
@@ -21,8 +20,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           body {
             padding: 0;
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-              Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           }
         `}</style>
         <GlobalFonts />
@@ -41,7 +38,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 MyApp.getInitialProps = async ({ Component, ctx }: AppContext)  => {
   const menu =  await getGlobalInfo();
   ctx.store.dispatch({ type: APP_ACTIONS.MENU_LOADED, menu });
-  // @ts-ignore
   const pageProps = Component.getInitialProps ? await Component.getInitialProps({ ...ctx }) : {};
   return {  pageProps };
 }

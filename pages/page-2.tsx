@@ -3,6 +3,7 @@ import { getCalculatorInfo } from '../services';
 import { useDispatch } from 'react-redux';
 import { APP_ACTIONS } from '../store/actions';
 import CalculatorComponent from '../components/calculator';
+import Head from 'next/head';
 
 interface CalculatorPageProps {
   calculatorTitle: string,
@@ -22,6 +23,9 @@ const CalculatorPage = (props: CalculatorPageProps) => {
 
   return (
     <>
+      <Head>
+        <title>Calculator</title>
+      </Head>
       <CalculatorComponent calculatorTitle={props.calculatorTitle}  calculatorDescription={props.calculatorDescription}/>
     </>
   );

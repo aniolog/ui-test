@@ -283,7 +283,6 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
-//@ts-ignore
 function MyApp({
   Component,
   pageProps
@@ -293,46 +292,46 @@ function MyApp({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 17,
       columnNumber: 5
     }
   }, __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "4243733796",
+    id: "3345229829",
     __self: this
-  }, "body{padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen, Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hbmliYWwvRGVza3RvcC9jb2RlL3VpLXRlc3QvcGFnZXMvX2FwcC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBbUIyQixBQUd1QixVQUNELFNBRTZELHFJQUN4RSIsImZpbGUiOiIvVXNlcnMvYW5pYmFsL0Rlc2t0b3AvY29kZS91aS10ZXN0L3BhZ2VzL19hcHAudHN4Iiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IFByb3ZpZGVyIH0gZnJvbSAncmVhY3QtcmVkdXgnO1xuaW1wb3J0IHsgY3JlYXRlV3JhcHBlciB9IGZyb20gJ25leHQtcmVkdXgtd3JhcHBlcic7XG5pbXBvcnQgc3RvcmUgZnJvbSAnLi4vc3RvcmUnO1xuaW1wb3J0IHsgQXBwUHJvcHMsIEFwcENvbnRleHQgfSBmcm9tICduZXh0L2FwcCc7XG5pbXBvcnQgeyBBUFBfQUNUSU9OUyB9IGZyb20gJy4uL3N0b3JlL2FjdGlvbnMnO1xuaW1wb3J0IHsgZ2V0R2xvYmFsSW5mbyB9IGZyb20gJy4uL3NlcnZpY2VzL2dsb2JhbCc7XG5pbXBvcnQgeyBDb250YWluZXIgfSBmcm9tICdyZWFjdC1ib290c3RyYXAnO1xuaW1wb3J0IEhlYWRlciBmcm9tICcuLi9jb21wb25lbnRzL2hlYWRlcic7XG5pbXBvcnQgeyBBcHBDb250YWluZXIgfSBmcm9tICcuLi9jb21wb25lbnRzL2FwcC1jb250YWluZXInO1xuaW1wb3J0IHsgR2xvYmFsRm9udHMgfSBmcm9tICcuLi9zdHlsZXMvZm9udHMnO1xuaW1wb3J0IHsgQ29sb3JzIH0gZnJvbSAnLi4vc3R5bGVzL2NvbG9ycyc7XG5cblxuLy9AdHMtaWdub3JlXG5mdW5jdGlvbiBNeUFwcCh7IENvbXBvbmVudCwgcGFnZVByb3BzIH06IEFwcFByb3BzKSB7XG4gIHJldHVybiAoXG4gICAgPFByb3ZpZGVyIHN0b3JlPXtzdG9yZX0+XG4gICAgICA8PlxuICAgICAgICA8c3R5bGUganN4IGdsb2JhbD57YFxuICAgICAgICAgIGJvZHkge1xuICAgICAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsIFNlZ29lIFVJLCBSb2JvdG8sIE94eWdlbixcbiAgICAgICAgICAgICAgVWJ1bnR1LCBDYW50YXJlbGwsIEZpcmEgU2FucywgRHJvaWQgU2FucywgSGVsdmV0aWNhIE5ldWUsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgICAgIDxHbG9iYWxGb250cyAvPlxuICAgICAgICA8Q29udGFpbmVyPlxuICAgICAgICAgIDxIZWFkZXIgLz5cbiAgICAgICAgICA8QXBwQ29udGFpbmVyPlxuICAgICAgICAgICAgPENvbXBvbmVudCB7Li4ucGFnZVByb3BzfSAvPlxuICAgICAgICAgIDwvQXBwQ29udGFpbmVyPlxuICAgICAgICA8L0NvbnRhaW5lcj5cbiAgICAgIDwvPlxuICAgIDwvUHJvdmlkZXI+XG4gIClcbn1cblxuXG5NeUFwcC5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyAoeyBDb21wb25lbnQsIGN0eCB9OiBBcHBDb250ZXh0KSAgPT4ge1xuICBjb25zdCBtZW51ID0gIGF3YWl0IGdldEdsb2JhbEluZm8oKTtcbiAgY3R4LnN0b3JlLmRpc3BhdGNoKHsgdHlwZTogQVBQX0FDVElPTlMuTUVOVV9MT0FERUQsIG1lbnUgfSk7XG4gIC8vIEB0cy1pZ25vcmVcbiAgY29uc3QgcGFnZVByb3BzID0gQ29tcG9uZW50LmdldEluaXRpYWxQcm9wcyA/IGF3YWl0IENvbXBvbmVudC5nZXRJbml0aWFsUHJvcHMoeyAuLi5jdHggfSkgOiB7fTtcbiAgcmV0dXJuIHsgIHBhZ2VQcm9wcyB9O1xufVxuXG5jb25zdCBtYWtlU3RvcmUgPSAoKSA9PiBzdG9yZTtcbmNvbnN0IHdyYXBwZXIgPSBjcmVhdGVXcmFwcGVyKG1ha2VTdG9yZSk7XG5cbi8vQHRzLWlnbm9yZVxuZXhwb3J0IGRlZmF1bHQgd3JhcHBlci53aXRoUmVkdXgoTXlBcHApOyJdfQ== */\n/*@ sourceURL=/Users/anibal/Desktop/code/ui-test/pages/_app.tsx */"), __jsx(_styles_fonts__WEBPACK_IMPORTED_MODULE_10__["GlobalFonts"], {
+  }, "body{padding:0;margin:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hbmliYWwvRGVza3RvcC9jb2RlL3VpLXRlc3QvcGFnZXMvX2FwcC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBa0IyQixBQUd1QixVQUNELFNBQ1giLCJmaWxlIjoiL1VzZXJzL2FuaWJhbC9EZXNrdG9wL2NvZGUvdWktdGVzdC9wYWdlcy9fYXBwLnRzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBQcm92aWRlciB9IGZyb20gJ3JlYWN0LXJlZHV4JztcbmltcG9ydCB7IGNyZWF0ZVdyYXBwZXIgfSBmcm9tICduZXh0LXJlZHV4LXdyYXBwZXInO1xuaW1wb3J0IHN0b3JlIGZyb20gJy4uL3N0b3JlJztcbmltcG9ydCB7IEFwcFByb3BzLCBBcHBDb250ZXh0IH0gZnJvbSAnbmV4dC9hcHAnO1xuaW1wb3J0IHsgQVBQX0FDVElPTlMgfSBmcm9tICcuLi9zdG9yZS9hY3Rpb25zJztcbmltcG9ydCB7IGdldEdsb2JhbEluZm8gfSBmcm9tICcuLi9zZXJ2aWNlcy9nbG9iYWwnO1xuaW1wb3J0IHsgQ29udGFpbmVyIH0gZnJvbSAncmVhY3QtYm9vdHN0cmFwJztcbmltcG9ydCBIZWFkZXIgZnJvbSAnLi4vY29tcG9uZW50cy9oZWFkZXInO1xuaW1wb3J0IHsgQXBwQ29udGFpbmVyIH0gZnJvbSAnLi4vY29tcG9uZW50cy9hcHAtY29udGFpbmVyJztcbmltcG9ydCB7IEdsb2JhbEZvbnRzIH0gZnJvbSAnLi4vc3R5bGVzL2ZvbnRzJztcbmltcG9ydCB7IENvbG9ycyB9IGZyb20gJy4uL3N0eWxlcy9jb2xvcnMnO1xuXG5cbmZ1bmN0aW9uIE15QXBwKHsgQ29tcG9uZW50LCBwYWdlUHJvcHMgfTogQXBwUHJvcHMpIHtcbiAgcmV0dXJuIChcbiAgICA8UHJvdmlkZXIgc3RvcmU9e3N0b3JlfT5cbiAgICAgIDw+XG4gICAgICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICAgICAgYm9keSB7XG4gICAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgIH1cbiAgICAgICAgYH08L3N0eWxlPlxuICAgICAgICA8R2xvYmFsRm9udHMgLz5cbiAgICAgICAgPENvbnRhaW5lcj5cbiAgICAgICAgICA8SGVhZGVyIC8+XG4gICAgICAgICAgPEFwcENvbnRhaW5lcj5cbiAgICAgICAgICAgIDxDb21wb25lbnQgey4uLnBhZ2VQcm9wc30gLz5cbiAgICAgICAgICA8L0FwcENvbnRhaW5lcj5cbiAgICAgICAgPC9Db250YWluZXI+XG4gICAgICA8Lz5cbiAgICA8L1Byb3ZpZGVyPlxuICApXG59XG5cblxuTXlBcHAuZ2V0SW5pdGlhbFByb3BzID0gYXN5bmMgKHsgQ29tcG9uZW50LCBjdHggfTogQXBwQ29udGV4dCkgID0+IHtcbiAgY29uc3QgbWVudSA9ICBhd2FpdCBnZXRHbG9iYWxJbmZvKCk7XG4gIGN0eC5zdG9yZS5kaXNwYXRjaCh7IHR5cGU6IEFQUF9BQ1RJT05TLk1FTlVfTE9BREVELCBtZW51IH0pO1xuICBjb25zdCBwYWdlUHJvcHMgPSBDb21wb25lbnQuZ2V0SW5pdGlhbFByb3BzID8gYXdhaXQgQ29tcG9uZW50LmdldEluaXRpYWxQcm9wcyh7IC4uLmN0eCB9KSA6IHt9O1xuICByZXR1cm4geyAgcGFnZVByb3BzIH07XG59XG5cbmNvbnN0IG1ha2VTdG9yZSA9ICgpID0+IHN0b3JlO1xuY29uc3Qgd3JhcHBlciA9IGNyZWF0ZVdyYXBwZXIobWFrZVN0b3JlKTtcblxuLy9AdHMtaWdub3JlXG5leHBvcnQgZGVmYXVsdCB3cmFwcGVyLndpdGhSZWR1eChNeUFwcCk7Il19 */\n/*@ sourceURL=/Users/anibal/Desktop/code/ui-test/pages/_app.tsx */"), __jsx(_styles_fonts__WEBPACK_IMPORTED_MODULE_10__["GlobalFonts"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 25,
       columnNumber: 9
     }
   }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["Container"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 26,
       columnNumber: 9
     }
   }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 27,
       columnNumber: 11
     }
   }), __jsx(_components_app_container__WEBPACK_IMPORTED_MODULE_9__["AppContainer"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 28,
       columnNumber: 11
     }
   }, __jsx(Component, _extends({}, pageProps, {
-    className: "jsx-4243733796" + " " + (pageProps && pageProps.className != null && pageProps.className || ""),
+    className: "jsx-3345229829" + " " + (pageProps && pageProps.className != null && pageProps.className || ""),
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 29,
       columnNumber: 13
     }
   }))))));
@@ -346,8 +345,7 @@ MyApp.getInitialProps = async ({
   ctx.store.dispatch({
     type: _store_actions__WEBPACK_IMPORTED_MODULE_5__["APP_ACTIONS"].MENU_LOADED,
     menu
-  }); // @ts-ignore
-
+  });
   const pageProps = Component.getInitialProps ? await Component.getInitialProps(_objectSpread({}, ctx)) : {};
   return {
     pageProps

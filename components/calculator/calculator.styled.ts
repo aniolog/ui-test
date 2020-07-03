@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Title } from '../title';
 import { Colors } from '../../styles/colors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CurrencyFormat from 'react-currency-format';
@@ -18,8 +17,27 @@ export const CalculatorContent = styled.div`
     padding-top: 120px;
 `;
 
-export const CalculatorTitle = styled(Title)`
+export const CalculatorTitle = styled.div`
+    margin-bottom: 1rem;
+    line-height: 60px;
+    display: inline-block;
+    width: 300px;
+    font-size: 36px;
+    font-family: Roboto;
+    font-weight: bold;
+    word-wrap: break-word; /* old name */
+    overflow-wrap: break-word;
 `;
+
+export const CalculatorText = styled.span`
+    display: inline;
+    background-color: ${Colors.navyBlue};
+    color: ${Colors.white};
+    padding: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+`;
+
 
 export const InfoContainer = styled.div`
     width: 350px;
@@ -144,4 +162,6 @@ export const ValueDollarIcon = styled(FontAwesomeIcon)`
 export const ResultAmount = styled.span`
     font-size: 72px;
     margin-left: 8px;
+    font-weight: normal;
+    font-family: 'Roboto';
 `;

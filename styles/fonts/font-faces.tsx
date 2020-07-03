@@ -26,13 +26,6 @@ const RobotoFontFaces = css`
         font-display: swap;
     }
 
-    @font-face {
-        font-family: 'Roboto';
-        src: url('/fonts/Roboto-Bold.ttf') format('truetype');
-        font-weight: Bolder;
-        font-style: normal;
-        font-display: swap;
-    }
 
     @font-face {
         font-family: 'CormorantGaramond';

@@ -18,6 +18,7 @@ import {
     Result,
     ValueDollarIcon,
     ResultAmount,
+    CalculatorText,
 } from './calculator.styled';
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import RangeSlider from '../range-slider';
@@ -40,7 +41,7 @@ const CalculatorComponent = (props: CalculatorPageProps) => {
             <Container>
                 <CalculatorContent>
                     <InfoContainer>
-                        <CalculatorTitle>{props.calculatorTitle}</CalculatorTitle>
+                        <CalculatorTitle><CalculatorText>{props.calculatorTitle}</CalculatorText></CalculatorTitle>
                         <CalculatorInfo>
                             {props.calculatorDescription}
                         </CalculatorInfo>

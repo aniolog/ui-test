@@ -21,7 +21,7 @@ const ReviewsPage = (props: ReviewsPageProps) => {
   return (
     <>
       <Head>
-        <title>Applicants</title>
+        <title>Testimonial</title>
       </Head>
       <TestimonialComponent 
         testimonialTitle={props.testimonialTitle}

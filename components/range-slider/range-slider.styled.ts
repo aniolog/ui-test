@@ -1,13 +1,14 @@
 import styled from 'styled-components';
+import { Colors } from '../../styles/colors';
 
-export const RangeInput = styled.input`
+export const RangeInput = styled.input<{ progres: number }>`
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
     height: 4px;
     outline: none;
     margin-top: 20px;
-
+    
     &::-webkit-slider-thumb {
         appearance: none;
         -webkit-appearance: none;

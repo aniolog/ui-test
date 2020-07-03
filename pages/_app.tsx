@@ -36,6 +36,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 
 MyApp.getInitialProps = async ({ Component, ctx }: AppContext)  => {
+  const isServer = !!ctx.req;
+  if(isServer && ctx.req.url === '/') {
+    const redirectUrl = `http://${ctx.req.headers.host}/page-1`;
+    ctx.res?.writeHead(301, { Location: redirectUrl });
+    ctx.res?.end();
+  }
   const menu =  await getGlobalInfo();
   ctx.store.dispatch({ type: APP_ACTIONS.MENU_LOADED, menu });
   const pageProps = Component.getInitialProps ? await Component.getInitialProps({ ...ctx }) : {};
